@@ -36,7 +36,7 @@ To match the examples in the tasks, you are given [this function](https://github
 
 This function is used only for visualisation purpose. You don’t have to push it to your repo. It may not be used during the correction.
 
-## Tasks]-
+## Tasks
 
 ### 0. New mode
 
