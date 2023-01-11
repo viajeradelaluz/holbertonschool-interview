@@ -6,3 +6,4 @@ __pycache__/
 0x01-insert_in_sorted_linked_list/insert
 0x02-heap_insert/0-node
 0x02-heap_insert/1-heap_insert
+0x04-sandpiles/0-sandpiles
