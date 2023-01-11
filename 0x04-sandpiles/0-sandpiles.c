@@ -20,6 +20,7 @@ static void print_grid(int grid[3][3])
 		printf("\n");
 	}
 }
+
 /**
  * grid_sum - Sum 3x3 grids
  * @grid1: Left 3x3 grid
