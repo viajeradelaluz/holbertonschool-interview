@@ -7,3 +7,4 @@ __pycache__/
 0x02-heap_insert/0-node
 0x02-heap_insert/1-heap_insert
 0x04-sandpiles/0-sandpiles
+0x05-linked_list_palindrome/palindrome
