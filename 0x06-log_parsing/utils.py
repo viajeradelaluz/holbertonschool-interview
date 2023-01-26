@@ -2,7 +2,7 @@
 """
 Utils for log parsing.
 """
-from dataclasses import dataclass
+import dataclasses
 
 LINES_BY_STATUS_CODE = {
     "200": 0,
@@ -16,7 +16,7 @@ LINES_BY_STATUS_CODE = {
 }
 
 
-@dataclass
+@dataclasses.dataclass
 class LineFormat:
     """Represents the line format."""
 
