@@ -4,7 +4,9 @@ Script that reads stdin line by line and computes metrics.
 """
 import sys
 
-from utils import check_line_format, count_line, print_metrics
+check_line_format = __import__("utils").check_line_format
+count_line = __import__("utils").count_line
+print_metrics = __import__("utils").print_metrics
 
 
 def main():
