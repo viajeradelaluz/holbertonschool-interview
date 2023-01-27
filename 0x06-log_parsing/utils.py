@@ -60,6 +60,6 @@ def count_line(line):
 def print_metrics(file_size):
     """Prints metrics."""
     print("File size: {}".format(file_size))
-    for status_code, total_lines in LINES_BY_STATUS_CODE.items():
+    for status_code, total_lines in sorted(LINES_BY_STATUS_CODE.items()):
         if total_lines:
             print("{}: {}".format(status_code, total_lines))
