@@ -2,7 +2,6 @@
 """
 Utils for log parsing.
 """
-import dataclasses
 
 LINES_BY_STATUS_CODE = {
     "200": 0,
@@ -16,19 +15,19 @@ LINES_BY_STATUS_CODE = {
 }
 
 
-@dataclasses.dataclass
 class LineFormat:
     """Represents the line format."""
 
-    ip: str
-    sep: str
-    date: str
-    time: str
-    http_method: str
-    endpoint: str
-    http_version: str
-    status_code: str
-    file_size: str
+    def __init__(self, *args):
+        self.ip = args[0]
+        self.sep = args[1]
+        self.date = args[2]
+        self.time = args[3]
+        self.http_method = args[4]
+        self.endpoint = args[5]
+        self.http_version = args[6]
+        self.status_code = args[7]
+        self.file_size = args[8]
 
 
 def check_line_format(line):
