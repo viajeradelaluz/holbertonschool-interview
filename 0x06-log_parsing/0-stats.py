@@ -16,14 +16,15 @@ def main():
         for index, input in enumerate(sys.stdin, start=1):
             line = check_line_format(input.split())
 
-            if line is not None:
-                count_line(line)
-                file_size += int(line.file_size)
-
-                if index % 10 == 0:
-                    print_metrics(file_size)
-            else:
+            if line is None:
                 continue
+
+            count_line(line)
+            file_size += int(line.file_size)
+
+            if index % 10 == 0:
+                print_metrics(file_size)
+
     except KeyboardInterrupt:
         print_metrics(file_size)
 

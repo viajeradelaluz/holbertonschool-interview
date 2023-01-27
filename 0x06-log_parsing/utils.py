@@ -61,5 +61,5 @@ def print_metrics(file_size):
     """Prints metrics."""
     print("File size: {}".format(file_size))
     for status_code, total_lines in sorted(LINES_BY_STATUS_CODE.items()):
-        if total_lines:
+        if total_lines > 0:
             print("{}: {}".format(status_code, total_lines))
