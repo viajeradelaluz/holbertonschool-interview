@@ -16,7 +16,7 @@ def main():
         for index, input in enumerate(sys.stdin, start=1):
             line = check_line_format(input.split())
 
-            if line:
+            if line is not None:
                 count_line(line)
                 file_size += int(line.file_size)
 
