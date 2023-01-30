@@ -29,13 +29,13 @@ def check_line_format(line):
         return None
 
     line_ = LineFormat(*line)
-    return line_ if line_.status_code.isdigit() else None
+    return line_
 
 
-def count_line(line_):
+def count_line(status_code):
     """Counts lines by status code."""
-    if line_.status_code in LINES_BY_STATUS_CODE:
-        LINES_BY_STATUS_CODE[line_.status_code] += 1
+    if status_code.isdigit() and status_code in LINES_BY_STATUS_CODE:
+        LINES_BY_STATUS_CODE[status_code] += 1
 
 
 def print_metrics(file_size):

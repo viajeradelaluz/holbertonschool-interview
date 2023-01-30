@@ -4,20 +4,20 @@ import sys
 from time import sleep
 import datetime
 
-# for i in range(5):
-#     sleep(random.random())
-#     sys.stdout.write(
-#         '{:d}.{:d}.{:d}.{:d} - [{}] "GET /projects/260 HTTP/1.1" {} {}\n'.format(
-#             random.randint(1, 255),
-#             random.randint(1, 255),
-#             random.randint(1, 255),
-#             random.randint(1, 255),
-#             datetime.datetime.now(),
-#             random.choice([200, 301, 400, 401, 403, 404, 405, 500]),
-#             random.randint(1, 1024),
-#         )
-#     )
-#     sys.stdout.flush()
+for i in range(5):
+    sleep(random.random())
+    sys.stdout.write(
+        '{:d}.{:d}.{:d}.{:d} - [{}] "GET /projects/260 HTTP/1.1" {} {}\n'.format(
+            random.randint(1, 255),
+            random.randint(1, 255),
+            random.randint(1, 255),
+            random.randint(1, 255),
+            datetime.datetime.now(),
+            random.choice([200, 301, 400, 401, 403, 404, 405, 500]),
+            random.randint(1, 1024),
+        )
+    )
+    sys.stdout.flush()
 
 # Cases
 one_line = (
@@ -268,5 +268,5 @@ long_log = [
     '163.55.23.134 - [2017-02-05 23:32:27.911738] "GET /projects/260 HTTP/1.1" 301 698',
 ]
 
-for i in long_log:
+for i in wrong_format:
     print(i)

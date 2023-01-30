@@ -18,7 +18,7 @@ def main():
             if line is None:
                 continue
 
-            count_line(line)
+            count_line(line.status_code)
             file_size += int(line.file_size)
 
             if index % 10 == 0:
