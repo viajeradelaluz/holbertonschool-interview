@@ -21,7 +21,7 @@ def validUTF8(data):
             if not n_byte.startswith("10"):
                 return False
 
-        if n_byte.startswith("1"):
+        elif n_byte.startswith("1"):
             bits = len(n_byte.split("0")[0]) - 1
 
     return True
