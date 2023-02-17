@@ -14,14 +14,19 @@ def validUTF8(data):
     bits = 0
 
     for n in data:
-        n_byte = format(n, "#010b")[-8:]
+        byte = n & 255
 
-        if bits != 0:
-            bits -= 1
-            if not n_byte.startswith("10"):
+        if bits:
+            if byte >> 6 != 2:
                 return False
-
-        if n_byte.startswith("1"):
-            bits = len(n_byte.split("0")[0]) - 1
+            bits -= 1
+        
+        while (1 << abs(7 - bits)) & byte:
+            bits += 1
+        
+        if bits == 1 or bits > 4:
+            return False
+        
+        bits = max(bits - 1, 0)
 
     return True
