@@ -30,4 +30,4 @@ def validUTF8(data):
         
         bits = max(bits - 1, 0)
 
-    return True
+    return bits == 0
