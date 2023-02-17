@@ -20,6 +20,7 @@ def validUTF8(data):
             if byte >> 6 != 2:
                 return False
             bits -= 1
+            continue
         
         while (1 << abs(7 - bits)) & byte:
             bits += 1
