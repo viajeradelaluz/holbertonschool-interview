@@ -21,13 +21,13 @@ def validUTF8(data):
                 return False
             bits -= 1
             continue
-        
+
         while (1 << abs(7 - bits)) & byte:
             bits += 1
-        
+
         if bits == 1 or bits > 4:
             return False
-        
+
         bits = max(bits - 1, 0)
 
     return bits == 0
